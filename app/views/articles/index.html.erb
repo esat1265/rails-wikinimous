@@ -1,9 +1,9 @@
 
 <div class="container">
-  <div class="row">
+  <div class="row justify-content-center">
   <% @articles.each do |article| %>
-    <div class="form-check">
-        <h3><%= link_to article['title'], article_path(article["id"]) %></h3>
+    <div class="col-12 text-center form-check shadow p-2 mb-3 bg-body rounded ">
+        <h3><%= link_to article['title'], article_path(article["id"]), class:"text-decoration-none " %> </h3>
         <p><%= article['content']%></p>
     </div>
   <% end %>
